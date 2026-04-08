@@ -1,0 +1,27 @@
+# ===== Kotlin/Ktor (api/) =====
+api/.gradle/
+api/build/
+api/out/
+*.class
+*.jar
+
+# ===== React/Node (dashboard/) =====
+dashboard/node_modules/
+dashboard/dist/
+dashboard/.vite/
+
+# ===== SQLite =====
+*.db
+*.db-shm
+*.db-wal
+
+# ===== C (core/) =====
+core/*.o
+core/honeypot
+
+# ===== OS / IDE =====
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+.vscode/
