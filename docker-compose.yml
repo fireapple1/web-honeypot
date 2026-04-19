@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   core:
     build:
@@ -17,6 +15,8 @@ services:
       - "8081:8081"
     volumes:
       - db-data:/data
+    environment:
+      DB_PATH: /data/honeypot.db
     depends_on:
       - core
     restart: unless-stopped
@@ -24,6 +24,8 @@ services:
   dashboard:
     build:
       context: ./dashboard
+      args:
+        VITE_API_URL: /api
     ports:
       - "3000:80"
     depends_on:

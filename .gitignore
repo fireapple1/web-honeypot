@@ -9,11 +9,16 @@ api/out/
 dashboard/node_modules/
 dashboard/dist/
 dashboard/.vite/
+dashboard/.env
 
 # ===== SQLite =====
 *.db
 *.db-shm
 *.db-wal
+
+# ===== Runtime data mount (keep directory, ignore contents) =====
+data/*
+!data/.gitkeep
 
 # ===== C (core/) =====
 core/*.o
@@ -25,3 +30,6 @@ Thumbs.db
 .idea/
 *.iml
 .vscode/
+
+.claude
+claude.md
